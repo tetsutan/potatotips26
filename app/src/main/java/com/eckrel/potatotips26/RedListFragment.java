@@ -36,6 +36,10 @@ public class RedListFragment extends Fragment {
 //        String[] items = {"aaaaaaaaa"};
         String[] items = {"aaaaaaaaa", "bbbbbbbbbbbb"};
 
+        // ここでやっちゃった
+        adapter.setItems(items);
+        adapter.notifyDataSetChanged();
+
         if(items.length == 1) {
 
             getActivity().getSupportFragmentManager().beginTransaction()
@@ -44,8 +48,9 @@ public class RedListFragment extends Fragment {
 
         }
         else{
-            adapter.setItems(items);
-            adapter.notifyDataSetChanged();
+            // ほんとはここ
+//            adapter.setItems(items);
+//            adapter.notifyDataSetChanged();
         }
 
     }
